@@ -1,0 +1,128 @@
+.card-body, .inner{
+    color: white;
+    padding: 2em 1em 1.5em 1em;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    
+    width: 60%;
+    margin-left: -20px;
+    
+    height: 50%;
+    margin: auto 0;
+}
+
+.inner{
+    background-color: #0F0E17;
+}
+
+.card-text{
+    margin-bottom: 2em;
+    
+}
+
+.card-buttom a{
+    text-decoration: none;
+    color: white;
+    margin: 0.2em;
+    padding: 0.4em 0.8em;
+}
+
+.code{
+    visibility: hidden;
+    font-weight: 1000;
+    transition: all 0.3s color 0.3s linear;
+}
+
+.buttom-pag{
+    background-color: rgb(44, 161, 207);
+    border: 2px solid rgb(44, 161, 207);
+}
+
+.buttom-code{
+    border: 2px solid rgb(44, 161, 207);
+}
+
+#projects .project-main .card .card-body .card-buttom .buttom-code:hover > .code{
+    visibility: visible;
+    color: rgb(44, 161, 207);
+}
+
+.card-body{
+    z-index: 1;
+    position: relative;
+    
+    top: 0;
+    bottom: 0;
+
+    
+    object-fit: cover;
+    
+}
+
+.card{
+    position: absolute;
+    z-index: -1;
+    margin-left: 1.2em;
+    display: block;
+}
+
+.project-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image{
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+
+@media screen and (min-width: 1380px){
+    .project-main{
+        font-size: 16px !important;
+    }
+    .project-grid{
+        font-size: 12px;
+    }
+    
+ 
+}
+
+@media screen and (min-width: 1280px){
+    .project-main{
+        font-size: 20px ;
+    }
+    .project-grid{
+        font-size: 18px ;
+    }
+    
+ 
+}
+
+@media screen and (min-width:  1000px){
+    .project-main{
+        font-size: 18px ;
+    }
+
+    .project-grid{
+        font-size: 16px ;
+    }
+ 
+}
+
+@media screen and (min-width:  765px){
+    .project-main{
+        font-size: 14px ;
+    }
+
+    .project-grid{
+        font-size: 12px;
+    }
+ 
+}
