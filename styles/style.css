@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -12,29 +13,37 @@ body{
     width: 100%;
     height: 100vh;
     
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 15%, rgba(34,111,163,1) 60%, rgba(255,255,255,1) 100%);
+    background-color: rgba(2,0,36,1);
+    /*background: linear-gradient(180deg, rgba(2,0,36,1) 15%, rgba(34,111,163,1) 60%, rgba(255,255,255,1) 100%);
+    */
+    background-color: rgba(2,0,36,1);
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+
+
+    color: white;
 }
 
 #title{
     grid-area: t;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     word-wrap: break-word;
+
+    align-self: flex-end;
 }
 
 .elements{
-    padding: 0px 2em 0px 2em;
+    padding: 0px 0em 0px 3em;
     display: grid;
     grid-template-areas: "t i"
                         "d i";
 }
 
 #projects{
-    padding-top: 4em;
+    padding: 4em 0em 4em 0em;
+    min-height: 100vh;
 }
 
 .subtitle{
@@ -46,30 +55,6 @@ body{
 
 }
 
-.project-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 2rem;
-}
-
-.project-image{
-    width: 100%;
-    object-fit: cover;
-}
-
-.project-title{
-    padding: 1.2em 1em;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    
-}
-
-.project-tile{
-    margin: 1.6em;
-    background-color: rgb(50, 50, 50);
-    text-decoration: none;
-}
 
 #navbar{
     background-color: rgba(2,0,36,1);
@@ -78,17 +63,23 @@ body{
     font-size: 0.8em;
 
     z-index: 2;
-    
-    padding: 0.6em 0em 0.6em 0em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    height: 2.5em;
+    height: 80px;
+
+    
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 80px;
+
+    padding: 0px 2em 0px 2em;
 }
 
 #nav-ul{
@@ -102,7 +93,6 @@ body{
 }
 
 #nav-ul li a{
-    display: block;
     text-decoration: none;
     color: white;
     padding: 0.4em 0.8em;
@@ -114,15 +104,47 @@ body{
     border-bottom: 4px solid white;
 }
 
+.navbar-enlace{
+    display: flex;
+    align-items: center;
+}
+
+.toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0px 20px;
+    line-height: 60px;
+
+    display: none;
+
+}
+
+.toggle:hover{
+    cursor: pointer;
+}
+
+#logo{
+    color: white;
+    text-decoration: none;
+    font-weight: 1000;
+}
+
 #enlace-descargar{
     text-decoration: none;
     color: white;
     background-color: rgb(34,111,163);
     padding: 0.4em 0.8em;
+
+    width: max-content;
+    
 }
 
 .navbar-descargar{
-    padding-right: 1em;
+    padding-right: 40px;
+    width: max-content;
+
 }
 
 #img-perfil{
@@ -137,17 +159,6 @@ body{
 }
 
 
-.code{
-    visibility: hidden;
-    transition: all 0.3s color 0.3s linear;
-}
-
-.project-tile:hover > .project-title .code,
-.project-title:hover > .code,
-.project-image:hover ~ .proyect-title .code{
-    visibility: visible;
-    color: rgb(44, 161, 207);
-}
 
 #section-contact{
     display: flex;
@@ -156,7 +167,6 @@ body{
     justify-content: center;
     align-items: center;
 
-    padding-top: 4em;
 
     background-color: rgba(2,0,36,1);
     color: white;
@@ -188,30 +198,68 @@ body{
     color: white;
 }
 
-@media screen and (max-width: 768px){
-    .project-grid{
-        grid-template-columns: 1fr;
-    }
+.nav-ul-visible{
+    left: 0 !important;
+}
 
-    .project-tile{
-        margin: 2em auto;
+@media screen and (max-width: 768px){
+
+    #navbar{
+        font-size: 0.8em;
+    }
+    .elements{
+        display: grid;
+        grid-template-areas:"i" 
+                        "t"
+                        "d";
+        padding: 5em 2em 2em 2em;
+        width: 80%;
+    }
+    #welcome-section{
+         
+        height: calc(100% - 60px);;
+    }
+    #img-perfil{
+        max-width: 600px;
+    }
+    #title{
+        font-size: 1.2em;
     }
 
     #navbar{
-        justify-content: center;
-        font-size: 0.8em;
+        height: 60px;
+    }
+    #nav{
+        line-height: 60px;
     }
 
-    #welcome-section{
-        flex-direction: column-reverse;
+    #nav-ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        background-color: rgba(2,0,36,1);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+
         align-items: center;
-        justify-content: center;
+        color: black;
+
+        padding: 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
     }
 
-    #img-perfil{
-        width: 90%;
-        min-width: 300px;
-        max-width: 1200px;
+    #enlace-descargar span{
+        display: none;
+    }
+
+    .toggle{
+        display: block;
     }
 }
 
@@ -220,9 +268,4 @@ body{
         font-size: 1.4rem;
     }
 
-    #img-perfil{
-        width: 80%;
-        min-width: 300px;
-        max-width: 1200px;
-    }
 }
