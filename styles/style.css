@@ -202,6 +202,116 @@ body{
     left: 0 !important;
 }
 
+
+
+.div-background{
+    width: 100%;
+    background-color: rgb(34,111,163);
+}
+.div-background img{
+    width: 100%;
+}
+
+#contact{
+    height: 100vh;
+    min-height: 450px;
+    padding: 4em 0px 4em 0px;
+    background-color: rgb(34,111,163);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-contact{
+    color: white;
+    background-color: rgba(2,0,36,1);
+    padding: 1em;
+    width: 550px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#form-contact > *{
+    margin: 4px;
+}
+
+#testimonios{
+    background-color: rgba(2,0,36,1);
+    
+    padding: 4em 2em 4em 2em;
+    min-height: 100vh;
+
+    color: white;
+}
+
+#testimonios-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.testimonio{
+    width: 30%;
+    padding: 8px;
+    align-self: flex-start;
+}
+
+.header-testimonio > *{
+    display: inline-block;
+    word-wrap: break-word;
+    color: rgb(147, 184, 252);
+}
+
+#desc-test{
+    padding: 16px;
+    margin: 16px;
+}
+
+
+
+#servicios{
+    background-color: rgb(34,111,163);
+    
+    padding: 4em 2em 4em 2em;
+    min-height: 100vh;
+
+    color: black;
+}
+
+#servicios-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.servicio{
+    width: 30%;
+    padding: 8px;
+    align-self: flex-start;
+}
+
+.servicio > *{
+    margin: 16px 0;
+}
+
+.services-link{
+    font-size: 16px;
+    font-weight: 1000;
+    text-decoration: none;
+    text-align: center;
+
+    color: rgb(62, 156, 173);
+
+    background-color: rgba(2,0,36,1);
+    padding: 12px 8px;
+}
+
 @media screen and (max-width: 768px){
 
     #navbar{
@@ -260,6 +370,29 @@ body{
 
     .toggle{
         display: block;
+    }
+
+    #testimonios-area{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    
+    .testimonio{
+        width: 100%;
+    }
+
+    #servicios-area{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio{
+        width: 100%;
     }
 }
 
