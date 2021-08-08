@@ -215,7 +215,7 @@ body{
 #contact{
     height: 100vh;
     min-height: 450px;
-    padding: 4em 0px 4em 0px;
+    padding: 6em 0px 6em 0px;
     background-color: rgb(34,111,163);
 
     display: flex;
@@ -312,12 +312,23 @@ body{
     padding: 12px 8px;
 }
 
+.enviarForm{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+
+    background-color: rgb(34,111,163);
+    color: black;
+    font-weight: 1000;
+}
+
 @media screen and (max-width: 768px){
 
     #navbar{
         font-size: 0.8em;
     }
     .elements{
+        text-align: center;
         display: grid;
         grid-template-areas:"i" 
                         "t"
